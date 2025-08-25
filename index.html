@@ -3,301 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio Web</title>
+  <title>CV Carlos Andres Gomez Perez</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #3498db;
-      --accent-color: #e74c3c;
-      --light-color: #ecf0f1;
-      --dark-color: #34495e;
-      --text-color: #333;
-      --text-light: #777;
-      --transition: all 0.3s ease;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #f5f7fa;
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      min-height: 100vh;
-    }
-
-    /* Sidebar Styles */
-    .sidebar {
-      width: 320px;
-      background: var(--primary-color);
-      color: white;
-      padding: 30px 20px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .profile {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid var(--secondary-color);
-      margin-bottom: 15px;
-    }
-
-    .profile h1 {
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-
-    .profile p {
-      color: var(--light-color);
-      font-size: 16px;
-    }
-
-    .contact-info {
-      margin: 20px 0;
-    }
-
-    .contact-info div {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .contact-info i {
-      margin-right: 10px;
-      color: var(--secondary-color);
-      font-size: 18px;
-      width: 24px;
-    }
-
-    .skills {
-      margin-top: 20px;
-    }
-
-    .skills h3 {
-      border-bottom: 2px solid var(--secondary-color);
-      padding-bottom: 8px;
-      margin-bottom: 15px;
-      font-size: 20px;
-    }
-
-    .skill {
-      margin-bottom: 12px;
-    }
-
-    .skill-name {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
-    }
-
-    .skill-bar {
-      height: 8px;
-      background: #2c3e50;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .skill-level {
-      height: 100%;
-      background: var(--secondary-color);
-      border-radius: 10px;
-    }
-
-    /* Main Content Styles */
-    .main-content {
-      flex: 1;
-      padding: 40px;
-      background: white;
-    }
-
-    .section-title {
-      font-size: 28px;
-      margin-bottom: 30px;
-      color: var(--primary-color);
-      position: relative;
-      padding-bottom: 10px;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 60px;
-      height: 4px;
-      background: var(--secondary-color);
-    }
-
-    .about {
-      margin-bottom: 40px;
-    }
-
-    .about p {
-      margin-bottom: 15px;
-      font-size: 16px;
-      color: var(--text-light);
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: var(--transition);
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .project-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-bottom: 3px solid var(--secondary-color);
-    }
-
-    .project-info {
-      padding: 20px;
-    }
-
-    .project-title {
-      font-size: 18px;
-      margin-bottom: 10px;
-      color: var(--primary-color);
-    }
-
-    .project-desc {
-      color: var(--text-light);
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .project-tech {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 15px;
-    }
-
-    .tech-tag {
-      background: var(--light-color);
-      color: var(--primary-color);
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 500;
-    }
-
-    .project-link {
-      display: inline-block;
-      color: var(--secondary-color);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: var(--transition);
-    }
-
-    .project-link:hover {
-      color: var(--primary-color);
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--dark-color);
-      color: white;
-      text-align: center;
-      padding: 20px;
-      width: 100%;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        padding: 20px;
-      }
-
-      .profile-img {
-        width: 120px;
-        height: 120px;
-      }
-
-      .main-content {
-        padding: 30px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .main-content {
-        padding: 20px;
-      }
-
-      .section-title {
-        font-size: 24px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="my-style.css">
 </head>
 <body>
 <div class="container">
   <!-- Sidebar con información personal -->
   <aside class="sidebar">
     <div class="profile">
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80" alt="Foto de perfil" class="profile-img">
-      <h1>Juan Pérez</h1>
+      <img src="perfil.webp" alt="Foto de perfil" class="profile-img">
+      <h1>Carlos Andres Gómez Pérez</h1>
       <p>Desarrollador WordPress Full Stack</p>
     </div>
-
     <div class="contact-info">
       <h3>Contacto</h3>
       <div>
         <i class="fas fa-envelope"></i>
-        <span>juan.perez@ejemplo.com</span>
+        <span>carlosandres89.gp@gmail.com</span>
       </div>
       <div>
         <i class="fas fa-phone"></i>
-        <span>+1 234 567 890</span>
+        <span>+53 56351143</span>
       </div>
       <div>
         <i class="fas fa-map-marker-alt"></i>
-        <span>Ciudad, País</span>
+        <span>Holguín, Cuba</span>
+      </div>
+      <div>
+        <i class="fab fa-linkedin"></i>
+        <span><a href="https://linkedin.com/in/carlos-andres-gómez-perez-461869209" target="_blank"></a>carlos-andres-gómez-perez-461869209</span>
       </div>
     </div>
 
@@ -305,11 +40,38 @@
       <h3>Habilidades Técnicas</h3>
       <div class="skill">
         <div class="skill-name">
+          <span>CSS/SCSS/HTML5</span>
+          <span>100%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 100%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">
           <span>WordPress</span>
           <span>95%</span>
         </div>
         <div class="skill-bar">
           <div class="skill-level" style="width: 95%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">
+          <span>JavaScript</span>
+          <span>95%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 95%;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-name">
+          <span>SEO</span>
+          <span>92%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 92%;"></div>
         </div>
       </div>
       <div class="skill">
@@ -323,29 +85,39 @@
       </div>
       <div class="skill">
         <div class="skill-name">
-          <span>JavaScript</span>
-          <span>85%</span>
+          <span>Angular 12</span>
+          <span>80%</span>
         </div>
         <div class="skill-bar">
-          <div class="skill-level" style="width: 85%;"></div>
+          <div class="skill-level" style="width: 80%;"></div>
         </div>
       </div>
       <div class="skill">
         <div class="skill-name">
-          <span>CSS/SCSS</span>
-          <span>88%</span>
+          <span>Base Datos (Oracle + SQL)</span>
+          <span>80%</span>
         </div>
         <div class="skill-bar">
-          <div class="skill-level" style="width: 88%;"></div>
+          <div class="skill-level" style="width: 80%;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="skills">
+      <h3>Idiomas</h3>
+      <div class="skill">
+        <div class="skill-name">
+          <span>Español</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 100%;"></div>
         </div>
       </div>
       <div class="skill">
         <div class="skill-name">
-          <span>HTML5</span>
-          <span>93%</span>
+          <span>Inglés</span>
         </div>
         <div class="skill-bar">
-          <div class="skill-level" style="width: 93%;"></div>
+          <div class="skill-level" style="width: 50%;"></div>
         </div>
       </div>
     </div>
@@ -355,40 +127,45 @@
   <main class="main-content">
     <section class="about">
       <h2 class="section-title">Sobre Mí</h2>
-      <p>Soy un desarrollador web especializado en WordPress con más de 5 años de experiencia creando sitios web atractivos y funcionales. Mi expertise incluye desarrollo de temas personalizados, plugins, e-commerce con WooCommerce y optimización de rendimiento.</p>
-      <p>Me apasiona crear soluciones web que no solo se vean bien, sino que también ofrezcan una experiencia de usuario excepcional y cumplan con los objetivos de negocio de mis clientes.</p>
+      <p>Soy <span class="highlight">Ingeniero en Informática</span> con más de 3 años de experiencia especializada en <span class="highlight">WordPress</span>.
+        Mi expertise abarca desarrollo con <span class="highlight">Elementor, WooCommerce, Custom Fields</span> y técnicas avanzadas de <span class="highlight">optimización SEO</span>.</p>
+      <p>Poseo amplio dominio de <span class="highlight">CSS3 y HTML5</span>, junto con sólidos conocimientos en <span class="highlight">JavaScript (VainillaJS)</span> y
+        desarrollo backend con <span class="highlight">PHP</span> (incluyendo el framework <span class="highlight">Yii</span>).</p>
+      <p>Complemento mi stack técnico con experiencia en desarrollo frontend utilizando <span class="highlight">Angular v.12</span> y
+        amplios conocimientos en gestión de <span class="highlight">Bases de Datos</span> (SQL y Oracle, incluyendo lenguaje de consultas avanzado).</p>
+      <p>Mi pasión es crear <span class="highlight">soluciones web integrales</span> que no solo destaquen por su estética y diseño, sino que también ofrezcan una <span class="highlight">experiencia de usuario excepcional</span> y cumplan con los <span class="highlight">objetivos de negocio</span> de cada cliente.</p>
     </section>
-
     <section class="projects">
-      <h2 class="section-title">Mis Proyectos</h2>
+      <h2 class="section-title">Mis Trabajos</h2>
       <div class="projects-grid">
         <!-- Proyecto 1 -->
         <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Proyecto 1" class="project-img">
+          <img src="mercybarcafe.webp" alt="Proyecto 1" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Tienda Online de Moda</h3>
-            <p class="project-desc">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y integración con pasarelas de pago.</p>
+            <h3 class="project-title">Tienda Online MercyBarCafé</h3>
+            <p class="project-desc">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y integración con pasarela de pago Tropipay.</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
               <span class="tech-tag">WooCommerce</span>
               <span class="tech-tag">PHP</span>
             </div>
-            <a href="#" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+            <a href="https://mercybarcafe.com/" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <!-- Proyecto 2 -->
         <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Proyecto 2" class="project-img">
+          <img src="Renetaxis-alquiler-aeropuerto.webp" alt="Proyecto 2" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Portal de Noticias</h3>
-            <p class="project-desc">Sistema de gestión de contenidos para medio digital con diseño optimizado para lectores.</p>
+            <h3 class="project-title">Sitio Web Renetaxis</h3>
+            <p class="project-desc">Landing page de promoción y adquisisción de servicios usando pasarela de pago Tropipay.</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
+              <span class="tech-tag">PHP</span>
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">CSS3</span>
             </div>
-            <a href="#" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+            <a href="https://renetaxis.com/" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
@@ -396,14 +173,25 @@
         <div class="project-card">
           <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" alt="Proyecto 3" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Sitio Corporativo</h3>
-            <p class="project-desc">Web institucional para empresa de servicios con panel administrativo personalizado.</p>
+            <h3 class="project-title">Tienda Online Renetaxis</h3>
+            <p class="project-desc">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y integración con pasarela de pago Tropipay.</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
               <span class="tech-tag">PHP</span>
-              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
             </div>
-            <a href="#" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link">Próximamente<i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="lesfleurs.jfif" alt="Proyecto 3" class="project-img">
+          <div class="project-info">
+            <h3 class="project-title">Tienda Online LesFleurs</h3>
+            <p class="project-desc"> Optimización y ajustes SEO.</p>
+            <div class="project-tech">
+              <span class="tech-tag">WordPress</span>
+            </div>
+            <a href="#" class="project-link">Próximamente<i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -412,29 +200,8 @@
 </div>
 
 <footer class="footer">
-  <p>© 2023 Mi Portafolio Web. Todos los derechos reservados.</p>
+  <p>© 2025 Carlos Andres Gomez Perez. Todos los derechos reservados.</p>
 </footer>
-
-<script>
-  // Efecto de aparición suave para las tarjetas de proyectos
-  document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card');
-
-    projectCards.forEach((card, index) => {
-      // Añadir un pequeño retraso para cada tarjeta
-      setTimeout(() => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-
-        // Hacerlas visibles con un retraso
-        setTimeout(() => {
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 100);
-      }, index * 100);
-    });
-  });
-</script>
+<script src="my-script.js"></script>
 </body>
 </html>
