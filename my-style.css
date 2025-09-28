@@ -79,12 +79,15 @@ body {
     font-size: 18px;
     width: 24px;
 }
+langu
 
-.skills {
+.skills, 
+.language  {
     margin-top: 20px;
 }
 
-.skills h3 {
+.skills h3,
+.language h3 {
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 8px;
     margin-bottom: 15px;
@@ -225,6 +228,11 @@ body {
 .project-link:hover {
     color: var(--primary-color);
 }
+span a {
+    color:#fff;
+    text-decoration: none;
+}
+
 
 /* Footer */
 .footer {
