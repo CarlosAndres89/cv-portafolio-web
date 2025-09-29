@@ -16,8 +16,12 @@
       <h1>Carlos Andres Gómez Pérez</h1>
       <p>Full Stack WordPress Developer </p>
     </div>
+    <div class="language-switch">
+      <button onclick="changeLanguage('es')">🇪🇸 Español</button>
+      <button onclick="changeLanguage('en')">🇬🇧 English</button>
+    </div>
     <div class="contact-info">
-      <h3>Contacto</h3>
+      <h3 id="contact-info">Contacto</h3>
       <div>
         <i class="fas fa-envelope"></i>
         <span>carlosandres89.gp@gmail.com</span>
@@ -36,22 +40,22 @@
       </div>
       <div>
         <i class="fab fa-github"></i>
-        <span><a href="https://carlosandres89.github.io/cv-portafolio-web/" target="_blank">Portafolio web</a></span>
+        <span><a href="https://carlosandres89.github.io/cv-portafolio-web/" target="_blank">Portafolio</a></span>
       </div>
     </div>
     <div class="language" style="margin-bottom: 20px ;">
-      <h3>Idiomas</h3>
+      <h3 id="language">Idiomas</h3>
       <div class="skill">
-        <div class="skill-name">
-          <span>Español</span>
+        <div class="skill-name" >
+          <span id="es">Español</span>
         </div>
         <div class="skill-bar">
           <div class="skill-level" style="width: 100%;"></div>
         </div>
       </div>
       <div class="skill">
-        <div class="skill-name">
-          <span>Inglés</span>
+        <div class="skill-name" >
+          <span id="en">Inglés</span>
         </div>
         <div class="skill-bar">
           <div class="skill-level" style="width: 50%;"></div>
@@ -148,7 +152,7 @@
   <!-- Contenido principal -->
   <main class="main-content">
     <section class="about">
-      <h2 class="section-title">Sobre Mí</h2>
+      <h2 id="about-title" class="section-title">Sobre Mí</h2>
       <p>Soy <span class="highlight">Ingeniero en Informática</span> con más de 4 años de experiencia especializada en <span class="highlight">
         desarrollo web con WordPress</span>. Experto en la creación de sitios altamente funcionales y optimizados mediante 
         <span class="highlight">Elementor, WooCommerce, Custom Fields</span> y técnicas avanzadas de <span class="highlight">SEO</span>.</p>
@@ -266,6 +270,7 @@
 <footer class="footer">
   <p>© 2025 Carlos Andres Gómez Pérez. Todos los derechos reservados.</p>
 </footer>
+<script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
 <script src="my-script.js"></script>
 </body>
 </html>

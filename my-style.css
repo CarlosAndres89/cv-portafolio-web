@@ -124,7 +124,8 @@ langu
     background: white;
 }
 
-.section-title {
+.section-title,
+.about-title {
     font-size: 28px;
     margin-bottom: 30px;
     color: var(--primary-color);
