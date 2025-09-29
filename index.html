@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="my-style.css">
 </head>
 <body>
+
 <div class="container">
   <!-- Sidebar con información personal -->
   <aside class="sidebar">
@@ -16,16 +17,12 @@
       <h1>Carlos Andres Gómez Pérez</h1>
       <p>Full Stack WordPress Developer </p>
     </div>
-    <div class="language-switch">
-      <button onclick="changeLanguage('es')">🇪🇸 Español</button>
-      <button onclick="changeLanguage('en')">🇬🇧 English</button>
-    </div>
     <div class="contact-info">
       <h3 id="contact-info">Contacto</h3>
       <div>
         <i class="fas fa-envelope"></i>
         <span>carlosandres89.gp@gmail.com</span>
-      </div>   
+      </div>
       <div>
         <i class="fas fa-phone"></i>
         <span>+53 56351143</span>
@@ -40,13 +37,13 @@
       </div>
       <div>
         <i class="fab fa-github"></i>
-        <span><a href="https://carlosandres89.github.io/cv-portafolio-web/" target="_blank">Portafolio</a></span>
+        <span id="portafolio"><a href="https://carlosandres89.github.io/cv-portafolio-web/" target="_blank">Portafolio</a></span>
       </div>
     </div>
     <div class="language" style="margin-bottom: 20px ;">
       <h3 id="language">Idiomas</h3>
       <div class="skill">
-        <div class="skill-name" >
+        <div class="skill-name">
           <span id="es">Español</span>
         </div>
         <div class="skill-bar">
@@ -54,7 +51,7 @@
         </div>
       </div>
       <div class="skill">
-        <div class="skill-name" >
+        <div class="skill-name">
           <span id="en">Inglés</span>
         </div>
         <div class="skill-bar">
@@ -62,9 +59,9 @@
         </div>
       </div>
     </div>
-    
+
     <div class="skills">
-      <h3>Habilidades Técnicas</h3>
+      <h3 id="skills">Habilidades Técnicas</h3>
       <div class="skill">
         <div class="skill-name">
           <span>HTML5/CSS/SCSS</span>
@@ -109,7 +106,7 @@
         <div class="skill-bar">
           <div class="skill-level" style="width: 95%;"></div>
         </div>
-      </div>       
+      </div>
       <div class="skill">
         <div class="skill-name">
           <span>Git (Version Control)</span>
@@ -118,7 +115,7 @@
         <div class="skill-bar">
           <div class="skill-level" style="width: 95%;"></div>
         </div>
-      </div>      
+      </div>
       <div class="skill">
         <div class="skill-name">
           <span>PHP</span>
@@ -139,127 +136,142 @@
       </div>
       <div class="skill">
         <div class="skill-name">
-          <span>Base Datos (Oracle + MySQL)</span>
+          <span id="database">Base Datos (Oracle + MySQL)</span>
           <span>80%</span>
         </div>
         <div class="skill-bar">
           <div class="skill-level" style="width: 80%;"></div>
         </div>
       </div>
-    </div>  
+    </div>
   </aside>
 
   <!-- Contenido principal -->
   <main class="main-content">
     <section class="about">
+      <div class="language-switch" style="text-align: right; margin-top: -40px; margin-bottom: 20px;">
+        <button onclick="changeLanguage('es')">🇪🇸 Español</button>
+        <button onclick="changeLanguage('en')">🇬🇧 English</button>
+      </div>
       <h2 id="about-title" class="section-title">Sobre Mí</h2>
-      <p>Soy <span class="highlight">Ingeniero en Informática</span> con más de 4 años de experiencia especializada en <span class="highlight">
-        desarrollo web con WordPress</span>. Experto en la creación de sitios altamente funcionales y optimizados mediante 
-        <span class="highlight">Elementor, WooCommerce, Custom Fields</span> y técnicas avanzadas de <span class="highlight">SEO</span>.</p>
-<p>Poseo dominio avanzado de <span class="highlight">HTML5, CSS3 y JavaScript (VainillaJS)</span>, complementado con experiencia en desarrollo 
-  backend utilizando <span class="highlight">PHP</span> y el framework <span class="highlight">Yii</span>.</p>
-<p>Además, cuento con experiencia en el desarrollo de aplicaciones SPA con <span class="highlight">Angular 12+</span> y una sólida formación 
-  en gestión de <span class="highlight">bases de datos relacionales</span> como <span class="highlight">SQL y Oracle</span>, con capacidad
-   para escribir consultas complejas y optimizar rendimiento.</p>
-<p>Mi enfoque combina <span class="highlight">autonomía técnica</span>, <span class="highlight">comunicación efectiva</span> y 
-  <span class="highlight">colaboración en equipo</span> para entregar soluciones web que cumplen con los objetivos de negocio y ofrecen una 
-  experiencia de usuario excepcional.</p>
+
+      <p id="text1">Soy <span class="highlight">Ingeniero en Informática</span> con más de 4 años de experiencia especializada en
+        <span class="highlight">desarrollo web con WordPress</span>. Experto en la creación de sitios altamente funcionales y optimizados mediante
+        <span class="highlight">Elementor, WooCommerce, Custom Fields</span> y técnicas avanzadas de <span class="highlight">SEO</span>.
+      </p>
+      <p id="text2">Poseo dominio avanzado de <span class="highlight">HTML5, CSS3 y JavaScript (VainillaJS)</span>, complementado con experiencia en desarrollo
+        backend utilizando <span class="highlight">PHP</span> y el framework <span class="highlight">Yii</span>.
+      </p>
+      <p id="text3">Además, cuento con experiencia en el desarrollo de aplicaciones SPA con <span class="highlight">Angular 12+</span>
+        y una sólida formación en gestión de <span class="highlight">bases de datos relacionales</span> como <span class="highlight">SQL y Oracle</span>,
+        con capacidad para escribir consultas complejas y optimizar rendimiento.
+      </p>
+      <p id="text4">Mi enfoque combina <span class="highlight">autonomía técnica</span>, <span class="highlight">comunicación efectiva</span>
+        y <span class="highlight">colaboración en equipo</span> para entregar soluciones web que cumplen con los  objetivos de negocio y ofrecen una
+        experiencia de usuario excepcional.
+      </p>
     </section>
     <section class="projects">
-      <h2 class="section-title">Mis Trabajos</h2>
+      <h2 class="section-title" id="projects">Mis Trabajos</h2>
       <div class="projects-grid">
         <!-- Proyecto 1 -->
         <div class="project-card">
           <img src="mercybarcafe.webp" alt="Tienda MercyBar-Cafe" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Tienda Online MercyBarCafé</h3>
-            <p class="project-desc">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y integración con pasarela de pago Tropipay.</p>
+            <h3 class="project-title" id="project_title1">Tienda MercyBarCafé</h3>
+            <p class="project-desc" id="project_desc1">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y
+              integración con pasarela de pago Tropipay.</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
               <span class="tech-tag">WooCommerce</span>
               <span class="tech-tag">PHP</span>
             </div>
-            <a href="https://mercybarcafe.com/" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+            <a href="https://mercybarcafe.com/" class="project-link"> <span id="ver1">Ver proyecto</span> <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         <!-- Proyecto 2 -->
         <div class="project-card">
           <img src="renetaxis.webp" alt="Renetaxis" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Sitio Web Renetaxis</h3>
-            <p class="project-desc">Landing page de promoción y adquisisción de servicios usando pasarela de pago Tropipay.</p>
+            <h3 class="project-title" id="project_title2">Sitio Web Renetaxis</h3>
+            <p class="project-desc" id="project_desc2">Landing page de promoción y adquisisción de servicios usando pasarela de
+              pago Tropipay.</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">JavaScript</span>
               <span class="tech-tag">CSS3</span>
             </div>
-            <a href="https://renetaxis.com/" class="project-link">Ver proyecto <i class="fas fa-arrow-right"></i></a>
+            <a href="https://renetaxis.com/" class="project-link" id="ver2">Ver proyecto <i
+                    class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         <!-- Proyecto 3 -->
         <div class="project-card">
           <img src="lesfleurs.jfif" alt="Les Fleurs" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Tienda Online LesFleurs</h3>
-            <p class="project-desc">Asesoría y optimización SEO.</p>
+            <h3 class="project-title" id="project_title3">Tienda Online LesFleurs</h3>
+            <p class="project-desc" id="project_desc3">Asesoría y optimización SEO.</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
             </div>
-            <a href="https://lesfleurs.es/" class="project-link">Ver <i class="fas fa-arrow-right"></i></a>
+            <a href="https://lesfleurs.es/" class="project-link" id="ver3">Ver <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         <!-- Proyecto 4 -->
         <div class="project-card">
           <img src="otbacademy.es.webp" alt="otbacademy.es" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Sitio Web Otbacademy.es</h3>
-            <p class="project-desc">Asesoría y optimización SEO</p>
+            <h3 class="project-title" id="project_title4">Sitio Web Otbacademy.es</h3>
+            <p class="project-desc" id="project_desc4">Asesoría y optimización SEO</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
             </div>
-            <a href="https://otbacademy.es/" class="project-link">Ver <i class="fas fa-arrow-right"></i></a>
+            <a href="https://otbacademy.es/" class="project-link" id="ver4">Ver <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         <!-- Proyecto 5 -->
         <div class="project-card">
           <img src="tiendarenetaxis.webp" alt="Tienda Renetaxis" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Tienda Online Renetaxis</h3>
-            <p class="project-desc">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y integración con pasarela de pago Tropipay. Uso de tmas pro</p>
+            <h3 class="project-title" id="project_title5">Tienda Online Renetaxis</h3>
+            <p class="project-desc" id="project_desc5">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y
+              integración con pasarela de pago Tropipay. Uso de tmas pro</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
               <span class="tech-tag">WooCommerce</span>
               <span class="tech-tag">CSS3</span>
             </div>
-            <a href="#" class="project-link">Próximamente <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        <!-- Proyecto 5 -->
-        <div class="project-card">
-          <img src="store.leisureexportingllc.webp" alt="Tienda LeisureExporting" class="project-img">
-          <div class="project-info">
-            <h3 class="project-title">Tienda Online LeisureExportingLLC</h3>
-            <p class="project-desc">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y integración con pasarela de pago Clover. Uso de temas pro.</p>
-            <div class="project-tech">
-              <span class="tech-tag">WordPress</span>
-              <span class="tech-tag">WooCommerce</span>
-            </div>
-            <a href="#" class="project-link">Próximamente <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link" id="proximamente1">Próximamente <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
         <!-- Proyecto 6 -->
         <div class="project-card">
+          <img src="store.leisureexportingllc.webp" alt="Tienda LeisureExporting" class="project-img">
+          <div class="project-info">
+            <h3 class="project-title" id="project_title6">Tienda Online LeisureExportingLLC</h3>
+            <p class="project-desc" id="project_desc6">E-commerce desarrollado con WordPress y WooCommerce. Diseño responsive y
+              integración con pasarela de pago Clover. Uso de temas pro.</p>
+            <div class="project-tech">
+              <span class="tech-tag">WordPress</span>
+              <span class="tech-tag">WooCommerce</span>
+            </div>
+            <a href="#" class="project-link" id="proximamente2">Próximamente <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Proyecto 7 -->
+        <div class="project-card">
           <img src="hostalcotarelo.webp" alt="Hostal Cotarelo" class="project-img">
           <div class="project-info">
-            <h3 class="project-title">Hostal Cotarelo</h3>
-            <p class="project-desc">Hostal desarrollado con WordPress tiene opcion de Booking (Reservas). Diseño responsive y integración con pasarela de pago Tropipay.</p>
+            <h3 class="project-title" id="project_title7">Hostal Cotarelo</h3>
+            <p class="project-desc" id="project_desc7">Hostal desarrollado con WordPress tiene opcion de Booking (Reservas).
+              Diseño responsive y integración con pasarela de pago Tropipay.</p>
             <div class="project-tech">
               <span class="tech-tag">WordPress</span>
               <span class="tech-tag">PHP</span>
               <span class="tech-tag">JavaScript</span>
             </div>
-            <a href="#" class="project-link">Próximamente <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="project-link" id="proximamente3">Próximamente <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -268,7 +280,7 @@
 </div>
 <!--Pie de pagina-->
 <footer class="footer">
-  <p>© 2025 Carlos Andres Gómez Pérez. Todos los derechos reservados.</p>
+  <p id="footer-text">© 2025 Carlos Andres Gómez Pérez. Todos los derechos reservados.</p>
 </footer>
 <script src="https://unpkg.com/i18next@21.6.14/dist/umd/i18next.min.js"></script>
 <script src="my-script.js"></script>
